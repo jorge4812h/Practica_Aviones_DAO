@@ -1,0 +1,131 @@
+[2024-05-20 12:24:07] [ ERROR] [AvionTest:30] IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"
+IO Exception: "java.nio.file.NoSuchFileException: create.sql"; "create.sql"; SQL statement:
+RUNSCRIPT FROM 'create.sql' [90031-224]
+[2024-05-20 12:25:10] [ ERROR] [AvionTest:30] Error de Sintaxis en sentencia SQL "\000d\000a\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "\000d\000a\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+
+
+CREATE TABLE FLOTA(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+MARCA VARCHAR(25) NOT NULL [42001-224]
+[2024-05-20 12:27:05] [ ERROR] [AvionTest:30] Error de Sintaxis en sentencia SQL "\000d\000a\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "\000d\000a\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+
+
+CREATE TABLE FLOTA(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+MARCA VARCHAR(25) NOT NULL [42001-224]
+[2024-05-20 12:27:55] [ ERROR] [AvionTest:30] Error de Sintaxis en sentencia SQL "\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL,\000d\000aMODELO VARCHAR(25) NOT NULL,\000d\000aMATRICULA VARCHAR(25) NOT NULL,\000d\000aFECHA_ENTRADA DATE [*]NOT NUL)"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL,\000d\000aMODELO VARCHAR(25) NOT NULL,\000d\000aMATRICULA VARCHAR(25) NOT NULL,\000d\000aFECHA_ENTRADA DATE [*]NOT NUL)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+
+CREATE TABLE FLOTA(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+MARCA VARCHAR(25) NOT NULL,
+MODELO VARCHAR(25) NOT NULL,
+MATRICULA VARCHAR(25) NOT NULL,
+FECHA_ENTRADA DATE NOT NUL) [42001-224]
+[2024-05-20 12:29:21] [ ERROR] [AvionTest:30] Error de Sintaxis en sentencia SQL "\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL,\000d\000aMODELO VARCHAR(25) NOT NULL,\000d\000aMATRICULA VARCHAR(25) NOT NULL,\000d\000aFECHA_ENTRADA DATE [*]NOT NUL)"; se esperaba "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "\000d\000aCREATE TABLE FLOTA(\000d\000aID INT AUTO_INCREMENT PRIMARY KEY,\000d\000aMARCA VARCHAR(25) NOT NULL,\000d\000aMODELO VARCHAR(25) NOT NULL,\000d\000aMATRICULA VARCHAR(25) NOT NULL,\000d\000aFECHA_ENTRADA DATE [*]NOT NUL)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, DEFAULT, GENERATED, ON UPDATE, NOT NULL, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+
+CREATE TABLE FLOTA(
+ID INT AUTO_INCREMENT PRIMARY KEY,
+MARCA VARCHAR(25) NOT NULL,
+MODELO VARCHAR(25) NOT NULL,
+MATRICULA VARCHAR(25) NOT NULL,
+FECHA_ENTRADA DATE NOT NUL) [42001-224]
+[2024-05-20 12:31:05] [ ERROR] [AvionTest:30] Imposible interpretar la constante "DATE" "19/05/2024"
+Cannot parse "DATE" constant "19/05/2024"; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123','19/05/2024') [22007-224]
+[2024-05-20 12:31:29] [ ERROR] [AvionTest:30] Imposible interpretar la constante "DATE" "19-05-2024"
+Cannot parse "DATE" constant "19-05-2024"; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123','19-05-2024') [22007-224]
+[2024-05-20 12:33:17] [ ERROR] [AvionTest:30] Imposible interpretar la constante "DATE" "19-05-2024"
+Cannot parse "DATE" constant "19-05-2024"; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123','19-05-2024') [22007-224]
+[2024-05-20 12:33:58] [ ERROR] [AvionTest:30] Conversión de datos fallida, convirtiendo "-2010 (FLOTA: ""FECHA_ENTRADA"" DATE NOT NULL)"
+Data conversion error converting "-2010 (FLOTA: ""FECHA_ENTRADA"" DATE NOT NULL)"; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123',19-05-2024) [22018-224]
+[2024-05-20 12:39:04] [ ERROR] [AvionTest:30] Columna "19-05-2024" no encontrada
+Column "19-05-2024" not found; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123',"19-05-2024") [42122-224]
+[2024-05-20 12:41:58] [ INFO ] [AvionIDao:45] Avion Registrado: Avion(id=1, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 12:42:23] [ ERROR] [AvionTest:30] Columna "2024-05-19" no encontrada
+Column "2024-05-19" not found; SQL statement:
+
+
+INSERT INTO FLOTA VALUES(DEFAULT,'BOEING','787','CNP-123',"2024-05-19") [42122-224]
+[2024-05-20 12:42:40] [ INFO ] [AvionIDao:45] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 12:51:19] [ INFO ] [AvionIDao:86] Avion Registrado: null
+[2024-05-20 12:51:31] [ INFO ] [AvionIDao:86] Avion Registrado: Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19)
+[2024-05-20 12:51:48] [ INFO ] [AvionIDao:86] Avion Registrado: Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19)
+[2024-05-20 13:39:00] [ INFO ] [AvionIDao:46] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:39:00] [ INFO ] [AvionIDao:118] Registro eliminado
+[2024-05-20 13:39:16] [ INFO ] [AvionIDao:46] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:39:16] [ INFO ] [AvionIDao:118] Registro eliminado
+[2024-05-20 13:48:36] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:48:36] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:48:56] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:48:56] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:49:06] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:49:06] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:49:46] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:49:46] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:49:46] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:50:23] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:50:23] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:50:23] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:50:23] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:53:24] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:53:24] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:53:24] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:53:35] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:53:35] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:53:35] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:53:59] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:53:59] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:54:00] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:54:00] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:54:44] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:54:44] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:54:44] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:55:20] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:55:20] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:55:20] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:55:20] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:55:47] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:55:47] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:55:47] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:55:47] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:56:21] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:56:21] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:56:21] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:56:21] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:57:24] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:57:25] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=3, nombre='Lacra', modelo='Mundial', matricula='987613', fechaEntrada=2024-03-17)
+[2024-05-20 13:57:25] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17), Avion(id=3, nombre='Lacra', modelo='Mundial', matricula='987613', fechaEntrada=2024-03-17)]
+[2024-05-20 13:58:57] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:58:57] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:58:57] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:58:57] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:59:22] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:59:22] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:59:22] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:59:22] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:59:52] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 13:59:52] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 13:59:52] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 13:59:52] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 14:00:42] [ INFO ] [AvionIDao:48] Avion Registrado: Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)
+[2024-05-20 14:00:42] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=1, nombre='BOEING', modelo='787', matricula='CNP-123', fechaEntrada=2024-05-19), Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
+[2024-05-20 14:00:42] [ INFO ] [AvionIDao:120] Registro eliminado
+[2024-05-20 14:00:42] [ INFO ] [AvionIDao:161] Aviones Registrados:[Avion(id=2, nombre='Pepito', modelo='Petito', matricula='578295', fechaEntrada=2024-05-17)]
